@@ -1,0 +1,6 @@
+version: '3'
+
+services:
+  dice-simulator:
+    build: .
+    command: ${DICE_COUNT:-2}
