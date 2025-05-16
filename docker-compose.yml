@@ -4,3 +4,7 @@ services:
   dice-simulator:
     build: .
     command: ${DICE_COUNT:-2}
+    deploy:
+      resources:
+        limits:
+          cpus: '0.8'  # 使用するCPUリソースの上限（0.8 = 80%のCPUリソース）
